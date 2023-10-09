@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.seat {
+    padding: .5rem;
+    background-color: #615b5b;
+    height: 1rem;
+    width: 1rem;
+    margin: .3rem;
+    border-radius: .1rem;
+}
+.row {
+    display: flex;
+}
+.seat:not(.reserved):hover{
+    cursor: pointer;
+    transform:scale(1.1)
+}
+.seat.selected{
+    background-color: rgb(237, 241, 120);
+}
+
+.seat.reserved{
+    background-color: coral;
+}
+
+.seat:nth-child(2){
+    margin-right: 2rem;
+}
+.seat:nth-child(6){
+    margin-right: 2rem;
+}
+.movieScreen{
+    height: 16rem;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    border-radius: .5rem;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.seatInfo{
+    display: flex;
+    color: white;
+    list-style:none ;
+    background-color: gray;
+    border-radius: .2rem;
+    text-align: center;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seatInfo .seat{
+margin-left:3rem;
+margin-right: 3rem;
+}
+.ticketInfoText{
+    color: white;
+}
+.ticketInfoText span{
+    color: red;
+}
