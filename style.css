@@ -7,6 +7,13 @@ body{
     align-items: center;
     height: 100vh;
 }
+.movieScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: coral;
+}
 .seat {
     padding: .5rem;
     background-color: #615b5b;
