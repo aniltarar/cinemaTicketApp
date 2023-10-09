@@ -14,6 +14,13 @@ body{
     font-size: 2rem;
     color: coral;
 }
+#submitButton{
+    padding: .3rem 2rem;
+    background-color: coral;
+    color: white;
+
+    border-radius: .2rem;
+}
 .seat {
     padding: .5rem;
     background-color: #615b5b;
