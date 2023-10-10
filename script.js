@@ -6,8 +6,15 @@ const ticketInfoMovieName = document.querySelector("#movie") //Seçilen Film
 const screenMovieName = document.querySelector("#screenMovieName"); //Perde'ye yansıtılan film
 const confirmButton = document.querySelector("#confirmButton");
 const seats = document.querySelectorAll(".container .seat");
+const localGetSeats = JSON.parse(localStorage.getItem("Reserved-Seats"));
 
-
+if(localGetSeats!=undefined){
+    seats.forEach((elements,index) => {
+        if(localGetSeats.includes(index) ){
+            elements.classList.add("reserved");
+        }
+    });
+}
 
 function clickFunc(e){
     if(e.target.classList.contains('seat')&& !e.target.classList.contains('reserved'))
@@ -48,4 +55,4 @@ function ticketReserved () {
 
     localStorage.setItem("Reserved-Seats",JSON.stringify(reservedTicketArr))
 }
-
+// localStorage.clear();
